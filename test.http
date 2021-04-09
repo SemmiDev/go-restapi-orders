@@ -1,0 +1,50 @@
+PUT localhost:8080/orders/2
+Accept: application/json
+Content-Type: application/json
+
+{
+  "orderId": 2,
+  "customerName": "sammidev update",
+  "orderedAt": "2021-11-09T21:21:46Z",
+  "items": [
+    {
+      "lineItemId": 2,
+      "itemCode": "123",
+      "description": "IPhone 3g",
+      "quantity": 10
+    }
+  ]
+}
+
+
+###
+
+DELETE http://localhost:8080/orders/1
+
+###
+
+GET http://localhost:8080/orders/3
+Accept: application/json
+
+###
+
+GET http://localhost:8080/orders
+Accept: application/json
+
+###
+POST http://localhost:8080/orders
+Content-Type: application/json
+
+{
+  "orderedAt": "2021-11-09T21:21:46+00:00",
+  "customerName":"sammidev",
+  "items":[
+    {
+      "itemCode":"123",
+      "description":"IPhone 3g",
+      "quantity":10
+    }
+  ]
+}
+
+###
